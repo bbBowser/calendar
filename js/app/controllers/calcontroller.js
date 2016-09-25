@@ -295,6 +295,13 @@ app.controller('CalController', ['$scope', 'Calendar', 'CalendarService', 'VEven
 							});
 						}
 					}
+
+					if (event.description) {
+						//TODO - cut off after n characters?
+						element.tooltip({
+							title: event.description
+						});
+					}
 				}
 		};
 	}
